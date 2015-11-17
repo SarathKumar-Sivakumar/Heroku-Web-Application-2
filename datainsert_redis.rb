@@ -7,14 +7,16 @@ require 'json'
 
 
 begin 
-    redisConn = Redis.new(:url => "mongodb://heroku_mwbnckkk:kkcmtc4c3id4ibtar0cnoqi04t@ds055564.mongolab.com:55564/heroku_mwbnckkk")
-    #redisConn = Redis.connect :url => ENV["redis://h:pbf731iss2eu3jaoojajbagnfs7@ec2-54-83-9-36.compute-1.amazonaws.com:18119"] 
-    puts 'connected...'
-    CSV.foreach('university.csv', :headers => true) do |csv_obj|
-       redisConn.set csv_obj['UNITID'],[csv_obj['OPEID'],csv_obj['opeid6'],csv_obj['INSTNM'],csv_obj['CITY'],csv_obj['STABBR'],csv_obj['INSTURL']].to_json
-    end 
+    redisConnection = Redis.new(:url => "redis://h:pn9nqom98a3ps8tc465jgtvf53@ec2-54-83-59-218.compute-1.amazonaws.com:10319")
+   
+    puts 'Databse connected'
+    CSV.foreach('example.csv', :headers => true) do |obj|
+       redisConnection.set obj['policyID'], obj['Statecode'], obj['County'], obj['Latitude'], obj['Longtitude'], obj['Line'], obj['Construction']].to_json
+    puts 'Item  inserted'    
+	end 
     redisConn.quit
-    puts "completed insertion sucessfully"
+        puts "Insertion into Redis db successful"
     
 end
 
+Policyid, Statecode, County, Latitude, Longtitude, Line, Construction, Point

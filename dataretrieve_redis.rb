@@ -5,9 +5,9 @@ require 'redis'
 require 'json'
 
 begin 
-    redisConn = Redis.new(:url => "mongodb://heroku_mwbnckkk:kkcmtc4c3id4ibtar0cnoqi04t@ds055564.mongolab.com:55564/heroku_mwbnckkk")
-    #redisConn = Redis.connect :url => ENV["redis://h:pbf731iss2eu3jaoojajbagnfs7@ec2-54-83-9-36.compute-1.amazonaws.com:18119"] 
-    puts 'connected...'    
+    redisConn = Redis.new(:url => "redis://h:pn9nqom98a3ps8tc465jgtvf53@ec2-54-83-59-218.compute-1.amazonaws.com:10319")
+
+    puts 'Databse connected'
     puts "Enter the Key value (UNITID)"
     primary_key=gets
     if primary_key.strip! == nil
