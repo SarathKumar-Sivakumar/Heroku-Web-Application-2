@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+
+require 'csv'
+require 'uri'
+require 'pg'
+
+
+uri = URI.parse('postgres://drmuqvrkzfmswf:IyGxG0qBuCoHeykxVcQ8edbrsa@ec2-54-83-53-120.compute-1.amazonaws.com:5432/dbb3os6b5regv7')
+
+begin 
+    connection = PG.connect(uri.hostname, uri.port, nil, nil, uri.path[1..-1], uri.user, uri.password)    
+    puts 'Databse connected'
+    
+    CSV.foreach('example.csv', :headers => true) do |csv_obj|
+       connection.exec("INSERT into insurance (Policyid, Statecode, County,  Latitude, Longtitude, Line, Construction, Point) VALUES ('"+csv_obj['policyID']+"','"+csv_obj['statecode']+"','"+csv_obj['county']+"','"+csv_obj['point_latitude']+"','"+csv_obj['point_longitude']+"','"+csv_obj['line']+"','"+csv_obj['construction']+"','"+csv_obj['point_granularity']+"');")
+    puts 'Item  inserted'    
+	end 
+    puts "Data insertion is sucessfully completed"
+    connection.close
+end
+
+
+
