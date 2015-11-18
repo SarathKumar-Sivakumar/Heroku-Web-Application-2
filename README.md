@@ -87,12 +87,12 @@ e. Sharing the project
 
 ###### References
 
-http://redis.io/topics/indexes
-http://www.rubydoc.info/github/ezmobius/redis-rb/Redis%3Ahmset
-https://devcenter.heroku.com/articles/mongolab
-https://devcenter.heroku.com/articles/heroku-redis
-https://devcenter.heroku.com/articles/heroku-postgresql
-http://www.postgresql.org/docs/9.3/static/app-psql.html
-http://docs.mongolab.com/connecting/
-http://heroku.com
-http://stackoverflow.com/
+   http://redis.io/topics/indexes
+   http://www.rubydoc.info/github/ezmobius/redis-rb/Redis%3Ahmset
+   https://devcenter.heroku.com/articles/mongolab
+   https://devcenter.heroku.com/articles/heroku-redis
+   https://devcenter.heroku.com/articles/heroku-postgresql
+   http://www.postgresql.org/docs/9.3/static/app-psql.html
+   http://docs.mongolab.com/connecting/
+   http://heroku.com
+   http://stackoverflow.com/
