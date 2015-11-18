@@ -5,7 +5,7 @@ require 'csv'
 mongo_uri = 'mongodb://heroku_mwbnckkk:kkcmtc4c3id4ibtar0cnoqi04t@ds055564.mongolab.com:55564/heroku_mwbnckkk'
 
 begin
-    #Connecting to the Mongo Client
+
     client = Mongo::Client.new([ 'ds055564.mongolab.com:55564' ],:database =>'heroku_mwbnckkk',:user=>'heroku_mwbnckkk',:password=>'kkcmtc4c3id4ibtar0cnoqi04t');
     puts "Successfully connected to mongo db"
     db = client.database
