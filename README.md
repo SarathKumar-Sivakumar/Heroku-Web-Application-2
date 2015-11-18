@@ -80,3 +80,19 @@ e. Sharing the project
 
     GTA as collaborator                       : heroku sharing:add samvaran.rallabandi@mavs.uta.edu
     Professor as collaborator                 : heroku sharing:add emmons@uta.edu
+
+###### The link to the running heroku app
+
+    https://cse-yxs1504-2.herokuapp.com/
+
+###### References
+
+http://redis.io/topics/indexes
+http://www.rubydoc.info/github/ezmobius/redis-rb/Redis%3Ahmset
+https://devcenter.heroku.com/articles/mongolab
+https://devcenter.heroku.com/articles/heroku-redis
+https://devcenter.heroku.com/articles/heroku-postgresql
+http://www.postgresql.org/docs/9.3/static/app-psql.html
+http://docs.mongolab.com/connecting/
+http://heroku.com
+http://stackoverflow.com/
