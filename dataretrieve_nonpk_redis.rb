@@ -7,13 +7,14 @@ require 'json'
 begin 
     connection = Redis.new(:url => "redis://h:pn9nqom98a3ps8tc465jgtvf53@ec2-54-83-59-218.compute-1.amazonaws.com:10319")
 
-      puts 'Database connected'
-    puts "Enter the primary Key value (Policyid)"
-    pk=gets.chomp
-       query=connection.get(pk)
+        puts 'Databse connected'
+    puts "Enter the Non-primary Key (Statecode or County or Construction)"
+   colnm=gets.chomp
+    puts "Enter the Non-primary Key value of selected columns"
+	q_key=gets.chomp
 
-	 puts "The results is :\n"
- 	 puts "the retrieved data for Policyid key :"+pk
+       query=connection.get(q_key)
+
 	
    	 val=JSON.parse(query)
 	 if unless val.nil? or query == 0  

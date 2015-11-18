@@ -11,8 +11,8 @@ begin
     connection = PG.connect(uri.hostname, uri.port, nil, nil, uri.path[1..-1], uri.user, uri.password)    
     puts 'Databse connected'
     
-    CSV.foreach('example.csv', :headers => true) do |csv_obj|
-       connection.exec("INSERT into insurance (Policyid, Statecode, County,  Latitude, Longtitude, Line, Construction, Point) VALUES ('"+csv_obj['policyID']+"','"+csv_obj['statecode']+"','"+csv_obj['county']+"','"+csv_obj['point_latitude']+"','"+csv_obj['point_longitude']+"','"+csv_obj['line']+"','"+csv_obj['construction']+"','"+csv_obj['point_granularity']+"');")
+    CSV.foreach('example.csv', :headers => true) do |obj|
+       connection.exec("INSERT into insurance (Policyid, Statecode, County,  Latitude, Longtitude, Line, Construction, Point) VALUES ('"+obj['policyID']+"','"+obj['statecode']+"','"+obj['county']+"','"+obj['point_latitude']+"','"+obj['point_longitude']+"','"+obj['line']+"','"+obj['construction']+"','"+obj['point_granularity']+"');")
     puts 'Item  inserted'    
 	end 
     puts "Data insertion is sucessfully completed"

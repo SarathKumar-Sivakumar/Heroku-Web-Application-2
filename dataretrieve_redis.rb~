@@ -9,16 +9,15 @@ begin
 
       puts 'Database connected'
     puts "Enter the primary Key value (Policyid)"
-    pk=gets
+    pk=gets.chomp
        query=connection.get(pk)
-
 
 	 puts "The results is :\n"
  	 puts "the retrieved data for Policyid key :"+pk
 	puts "Statecode | County | Latitude | Longtitude | Line | Construction | Point "
    	 val=JSON.parse(query)
 	 if unless val.nil? or query == 0  
-   	      puts "#{val[0]} | #{val[1]} | #{val[2]} | #{val[3]} | #{val[4]} | #{val[5]} | #{val[6]}"	     
+   	      puts "Statecode: #{val[0]}\n County: #{val[1]} \n Latitude:#{val[2]} \n Longitiude:#{val[3]} \n Line:#{val[4]} \n Construction:#{val[5]} \n Point:#{val[6]}"	     
          end
          end
    
