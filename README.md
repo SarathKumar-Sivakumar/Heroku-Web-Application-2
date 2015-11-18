@@ -1,4 +1,4 @@
-# CSE5335-project-1
+# CSE5335-project-2
 -----------
 
 Name	: Sarath Kumar Siva Kumar
@@ -10,7 +10,7 @@ UTA ID	: 1001108398
 Netid	: sxs8398
 -----------
 
-Webdata Managment and  Xml Project2
+Webdata Managment and  Xml Project 2
 -----------
 
 
